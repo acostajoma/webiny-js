@@ -65,7 +65,9 @@
                     "dynamodb:DescribeContinuousBackups",
                     "dynamodb:DescribeTable",
                     "dynamodb:DescribeTimeToLive",
+                    "dynamodb:GetItem",
                     "dynamodb:ListTagsOfResource",
+                    "dynamodb:PutItem",
                     "dynamodb:TagResource",
                     "dynamodb:UntagResource"
                   ],
@@ -90,8 +92,10 @@
                   "Sid": "PermissionForEventBridge",
                   "Effect": "Allow",
                   "Action": [
+                    "events:CreateEventBus", 
                     "events:DeleteRule",
                     "events:DescribeRule",
+                    "events:DescribeEventBus",
                     "events:ListTagsForResource",
                     "events:ListTargetsByRule",
                     "events:PutRule",
